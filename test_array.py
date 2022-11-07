@@ -95,3 +95,8 @@ class TestMyFuckingProgram(unittest.TestCase):
     def test_numer_digit2(self):
         n = 4567
         assert numer_digit2(n) == [4, 5, 6, 7]
+
+
+    def test_marge_sort(self):
+        s = [5, 4, 3, 2, 1]
+        assert marge_sort(s) == [1, 2, 3, 4, 5]
