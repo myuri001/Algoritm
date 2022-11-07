@@ -100,3 +100,8 @@ class TestMyFuckingProgram(unittest.TestCase):
     def test_marge_sort(self):
         s = [5, 4, 3, 2, 1]
         assert marge_sort(s) == [1, 2, 3, 4, 5]
+
+
+    def test_hoar_sort(self):
+        s = [5, 4, 3, 2, 1]
+        assert hoar_sort(s) == [1, 2, 3, 4, 5]

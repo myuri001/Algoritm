@@ -245,3 +245,30 @@ def marge_sort(A: list):
     for i in range(len(A)):
         A[i] = C[i]
     return A
+
+
+def hoar_sort(A: list):
+    """Сортировка Тони Хоара(Быстрая сортировка)
+    Выбрать барьерный элемент, разделить на три списка: меньше барьерного, равные и больше.
+    И их тоже разделить аналогично. затем соединить и записать в исходный список А
+    """
+    if len(A) <= 1:
+        return A
+    barrier = A[0]
+    L = []
+    M = []
+    R = []
+    for x in A:
+        if x < barrier:
+            L.append(x)
+        elif x == barrier:
+            M.append(x)
+        else:
+            R.append(x)
+    hoar_sort(L)
+    hoar_sort(R)
+    k = 0
+    for x in L + M + R:
+        A[k] = x
+        k += 1
+    return A
