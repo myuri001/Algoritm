@@ -105,3 +105,13 @@ class TestMyFuckingProgram(unittest.TestCase):
     def test_hoar_sort(self):
         s = [5, 4, 3, 2, 1]
         assert hoar_sort(s) == [1, 2, 3, 4, 5]
+
+
+    def test_left_bourdary(self):
+        s = [1, 3, 3, 6, 7, 9]
+        assert left_bourdary(s, 3) == 0
+
+
+    def test_right_bourdary(self):
+        s = [1, 3, 3, 6, 7, 9]
+        assert right_bourdary(s, 3) == 3

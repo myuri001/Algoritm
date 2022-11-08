@@ -272,3 +272,32 @@ def hoar_sort(A: list):
         A[k] = x
         k += 1
     return A
+
+
+def left_bourdary(A: list, key: int):
+    """
+    Бинарный поиск в массиве. Поиск границы слева.
+    А - массив, key - элемаент поиска. Возвращает левый индекс перед предполагаемым числом
+    или группой одинаковых чисел. Дальше запускаем функцию правого поиска. В итоге, если разница между левым и правым 0,
+    то числа нет, если один, то число есть в массиве одно и выведет индекс"""
+    left = -1
+    right = len(A)
+    while right - left > 1:
+        middle = (left + right)//2
+        if A[middle] < key:
+            left = middle
+        else:
+            right = middle
+    return left
+
+
+def right_bourdary(A: list, key: int):
+    left = -1
+    right = len(A)
+    while right - left > 1:
+        middle = (left + right) // 2
+        if A[middle] <= key:
+            left = middle
+        else:
+            right = middle
+    return right
