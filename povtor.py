@@ -303,7 +303,7 @@ def right_bourdary(A: list, key: int):
     return right
 
 
-def max_lower_or_equal_(A, x):
+def max_lower_or_equal(A, x):
     """
     Бинарный поиск индекса максимального числа, которое не превышает x
     Если нет элемента, то -1

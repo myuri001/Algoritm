@@ -115,3 +115,8 @@ class TestMyFuckingProgram(unittest.TestCase):
     def test_right_bourdary(self):
         s = [1, 3, 3, 6, 7, 9]
         assert right_bourdary(s, 3) == 3
+
+
+    def test_max_lower_or_equal(self):
+        s =[1, 2, 3, 4, 5]
+        assert max_lower_or_equal(s, 5) == 4
