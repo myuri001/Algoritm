@@ -301,3 +301,21 @@ def right_bourdary(A: list, key: int):
         else:
             right = middle
     return right
+
+
+def max_lower_or_equal_(A, x):
+    """
+    Бинарный поиск индекса максимального числа, которое не превышает x
+    Если нет элемента, то -1
+    """
+    if not A or A[0] > x:
+        return -1
+
+    left, right = 0, len(A)
+    while left + 1 < right:
+        mid = (left + right) // 2
+        if A[mid] <= x:
+            left = mid
+        else:
+            right = mid
+    return left
